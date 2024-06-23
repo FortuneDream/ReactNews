@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator()
 export default class index extends Component {
     render() {
         return (
+            
             <Tab.Navigator
                 screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused, color, size }) => {
