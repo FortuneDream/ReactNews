@@ -5,23 +5,20 @@ import NewsScreen from '../screens/news'
 
 
 const Stack = createStackNavigator()
+//函数式组件
+export default function NewsStack() {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="News" component={NewsScreen}
+                options={{
+                    title: "新闻",
+                    headerStyle: {
+                        backgroundColor: 'tomato'
+                    },
+                }} />
 
-export default class NewsStack extends Component {
-    render() {
-        return (
-            <Stack.Navigator>
-                <Stack.Screen name="News" component={NewsScreen}
-                    options={{
-                        title: "新闻",
-                        headerStyle: {
-                            backgroundColor: 'tomato'
-                        },
-                    }} />
-        
-            </Stack.Navigator>
-
-        )
-    }
+        </Stack.Navigator>
+    )
 }
 
 const styles = StyleSheet.create({})
