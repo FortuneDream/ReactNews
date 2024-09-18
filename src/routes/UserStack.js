@@ -12,7 +12,7 @@ export default class UserStack extends Component {
             <Stack.Navigator>
                 <Stack.Screen name="User" component={UserScreen}
                     options={{
-                        title: "首页",
+                        title: "用户",
                         headerStyle: {
                             backgroundColor: 'tomato'
                         }
