@@ -31,6 +31,8 @@ export class index extends Component {
     componentDidMount() {
         this.setState({
             city: "上海"
+        },()=>{
+            
         })
     }
 
