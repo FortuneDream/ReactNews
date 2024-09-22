@@ -3,6 +3,7 @@ import Swiper from 'react-native-swiper'
 import { Text, View, Image, ScrollView, StyleSheet, Touchable, TouchableOpacity, Dimensions, Alert, FlatList } from 'react-native'
 import Geolocation from '@react-native-community/geolocation'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import LinearGradient from 'react-native-linear-gradient'
 export class index extends Component {
 
     constructor() {
@@ -22,7 +23,8 @@ export class index extends Component {
                 }, {
                     type: '4',
                     name: "name3"
-                }]
+                }],
+                threeDays:[{fxData:'111'},{fxData:'222'},{fxData:'333'},]
         }
     }
 
@@ -91,11 +93,13 @@ export class index extends Component {
                         <Image style={[styles.slideImage]}
                             source={require('../../images/4.jpeg')} />
                     </Swiper>
+
                     <View style={[styles.city]}>
                         <Text style={[styles.cityText]}>
                             {this.state.city}
                         </Text>
                     </View>
+
                     <View style={[styles.indexContainer]}>
                         <FlatList
                             data={this.state.indeces}
@@ -104,6 +108,22 @@ export class index extends Component {
                             horizontal={true}
                         />
                     </View>
+
+                    <View style={[styles.dailyContainer]}>
+                        {
+                            this.state.threeDays.map((item,index)=>{
+                                return <LinearGradient
+                                start={{x:0,y:0}}
+                                end={{x:1,y:0}}
+                                colors={['#ddd','#333']}
+                                key={index}
+                                style={[styles.dailyItem]}>
+                                <Text>{item.fxData}</Text>
+                                </LinearGradient>
+                            })
+                        }
+                    </View>
+
                 </ScrollView>
             </View>
         )
@@ -142,19 +162,19 @@ const styles = StyleSheet.create({
         fontSize: 24,
         marginHorizontal: 10
     },
-    indexItem:{
-        alignItems:'center',
-        justifyContent:'center',
-        borderRadius:20,
-        backgroundColor:'#deb',
-        width:Dimensions.get('window').width/3 -10,
-        height:80,
-        marginTop:10,
-        marginRight:10
+    indexItem: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 20,
+        backgroundColor: '#deb',
+        width: Dimensions.get('window').width / 3 - 10,
+        height: 80,
+        marginTop: 10,
+        marginRight: 10
     },
-    indexName:{
-        color:'#222',
-        fontSize:14
+    indexName: {
+        color: '#222',
+        fontSize: 14
     }
 })
 
