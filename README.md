@@ -10,4 +10,4 @@
 yarn android
 
 ## 项目首页
-![images](https://github.com/FortuneDream/ReactNews/Screenshot_1727510113.png)
+![images](https://github.com/FortuneDream/ReactNews/blob/master/Screenshot_1727510113.png)
