@@ -5,6 +5,10 @@
 缺少Native侧的开发
 [视频地址](https://www.bilibili.com/video/BV1Pt4y1n7bD/?spm_id_from=333.337.search-card.all.click)
 
+## 涉及知识点
+- 环境搭建：React语法，yarn ，VS Code，
+- 基础组件：FlatList，Navigation，Swiper
+
 
 ## 启动方式
 yarn android
