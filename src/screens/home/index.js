@@ -4,6 +4,7 @@ import { Text, View, Image, ScrollView, StyleSheet, Touchable, TouchableOpacity,
 import Geolocation from '@react-native-community/geolocation'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import LinearGradient from 'react-native-linear-gradient'
+
 export class index extends Component {
 
     constructor() {

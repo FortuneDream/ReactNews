@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.facebook.react'
+
+android{
+  compileSdkVersion 34
+}
+
+
+repositories {
+  maven {
+    // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+    url "$projectDir/../node_modules/react-native/android"
+  }
+  mavenCentral()
+  google()
+}
+
+dependencies {
+  implementation("com.facebook.react:react-android")
+}
